@@ -1,0 +1,17 @@
+<div class="result-block">Платеж при заключении договора - {{paymentInfo.premium}} EUR 
+    ({{paymentInfo.premiumInBYN}} BYN на {{paymentInfo.date}}).
+    {{#ifCond paymentInfo.premiumForSecondPart '!==' ''}}
+        Очередной взнос в размере {{paymentInfo.premiumForSecondPart}} EUR должен быть оплачен до {{paymentInfo.termForSecondPart}}
+    {{/ifCond}}
+</div>
+<div>
+    <form>
+        <button class="button save">Сохранить напоминание</button>
+
+        <div class="positioned">
+            <button type="submit"class="button send" disabled>Отправить напоминание по email</button>
+            <input type="text" class="email" placeholder="Введите email" value="">
+            <div class="error-message error-send"></div>
+        </div>
+    </form>
+</div>

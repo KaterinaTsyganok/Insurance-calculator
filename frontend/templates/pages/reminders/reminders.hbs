@@ -1,0 +1,8 @@
+<div class="reminders-wrapper">
+    <button class="button remove-all" {{#unless reminders.length}}disabled{{/unless}}>Очистить все</button>
+    <div class="reminders">
+        {{#each reminders}}
+            {{> reminder reminder=this}}
+        {{/each}}
+    </div>      
+</div>

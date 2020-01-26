@@ -1,0 +1,112 @@
+@import "../helpers/variables";
+
+h2 {
+    font: bold 14px/20px Arial;
+    margin: 10px 0 5px 15px;
+}
+
+.insurance-calculator {
+
+    &-block {
+        border: 1px solid #e1e1e1;
+        margin: 5px;
+
+        &-item {
+            display: flex;
+            flex-wrap: wrap;
+        
+            .insurance-characteristic {
+                display: flex;
+                flex-direction: column;
+                width: 48%;
+                margin: 1%;
+
+                @media (max-width: 767px) {
+                    width: 98%;
+                }
+        
+                label {
+                    font-size: 13px;
+                    color: #555;
+                    margin-bottom: 5px;
+                }
+        
+                select,
+                input {
+                    height: 28px;
+                    padding: 5px 10px;
+                    width: 100%;
+                    color: #222222;
+                }
+            }
+        }
+    }
+}
+
+.positioned {
+    position: relative;
+
+    .error-input {
+        border: 1px solid red;
+    }
+
+    .error-message {
+        color: red;
+        font: bold 12px Arial;
+        position: absolute;
+    }
+
+    .error-engine {
+        top: 48px;
+    }
+
+    .error-send {
+        bottom: 40px;
+        left: 345px;
+
+        @media (max-width: 767px) {
+            left: 10px;
+        }
+    }
+}
+
+.calculate-amount,
+.save,
+.send {
+    height: 30px;
+    padding: 0 25px;
+    margin: 5px 0 10px 10px;
+    background: @green;
+
+    &:hover {
+        background: @green-hover;
+    }
+}
+
+.save,
+.send {
+    background: @blue;
+    
+    &:hover {
+        background: @blue-hover;
+    }
+}
+
+.email {
+    margin: 15px 0 10px 15px;
+    height: 30px;
+    width: 423px;
+    padding: 5px;
+
+    @media (max-width: 767px) {
+        margin: 10px 0 10px 10px;
+    }
+}
+
+.result-block {
+    color: @blue-hover;
+    border: 1px solid @blue;
+    margin: 5px 5px;
+    padding: 10px 5px;
+    font-size: 20px;
+}

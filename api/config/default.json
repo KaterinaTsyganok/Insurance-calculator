@@ -1,0 +1,13 @@
+{
+    "database": {
+        "tarifs": "./database/tarifs.json",
+        "multipliersCity": "./database/multipliersCity.json",
+        "multipliersAgeExp": "./database/multipliersAgeExp.json",
+        "reminders": "./database/reminders.json"
+    },
+  
+    "routes": {
+        "calculator": "./routes/calculator.js",
+        "reminders": "./routes/reminders.js"
+    }
+}

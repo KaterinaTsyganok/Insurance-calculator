@@ -1,0 +1,59 @@
+@import "../helpers/variables";
+
+.reminders {
+    display: flex;
+    flex-wrap: wrap;
+
+    &-wrapper {
+        max-width: 900px;
+        margin: 10px auto 0;
+    }
+}
+
+.remove-all {
+    margin: 0 0 5px 2%;
+    padding: 5px 10px;
+}
+
+.reminder {
+    border: 1px solid #a0a0a0;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all .3s;
+    width: 46%;
+    margin: 5px 2%;
+    padding: 5px;
+    box-shadow: 0 0 3px rgba(137, 191, 72, 0.48), 0 0 0 rgba(138,191,72,0.22);
+    position: relative;
+
+    @media (max-width: 767px) {
+        width: 98%;
+    }
+
+    h2 {
+      margin: 0;
+    }
+
+    &:hover {
+        box-shadow: 0 0 10px @green;
+
+        h2 {
+            color: @green-hover;
+            transition: all .3s;
+        }
+    }
+
+    .remove,
+    .pay {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        height: 30px;
+        padding: 0 25px;
+        font: 400 normal 14px 'Arial';
+    }
+
+    .pay {
+        right: 115px;
+    }
+}

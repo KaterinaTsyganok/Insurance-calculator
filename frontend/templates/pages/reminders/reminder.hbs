@@ -1,0 +1,17 @@
+<div class="reminder" data-id="{{reminder.id}}">
+    <h2>{{reminder.model}}</h2>
+    <p>Взнос: {{reminder.premium}} EUR</p>
+    <p>Действует до: {{reminder.term}}</p>
+    <p>
+        {{#ifCond reminder.payment '===' 'one-time'}}
+            Страховой взнос оплачен полностью
+        {{/ifCond}}
+        {{#ifCond reminder.payment '!==' 'one-time'}}
+            Оплата очередной части взноса ({{reminder.premiumForSecondPart}} EUR) до: {{reminder.payment}}
+        {{/ifCond}}
+    </p>
+    {{#ifCond reminder.payment '!==' 'one-time'}}
+        <button class="button pay">Оплатить</button>
+    {{/ifCond}}
+    <button class="button remove">Удалить</button>
+</div>

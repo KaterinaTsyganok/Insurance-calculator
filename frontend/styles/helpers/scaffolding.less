@@ -1,0 +1,57 @@
+@import "variables";
+
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    background: url('/styles/images/background.jpg') fixed center/100%;
+    font: 400 normal 14px 'Arial';
+}
+
+.page-container {
+    max-width: 1020px;
+    width: 100%;
+    background-color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 500px;
+}
+
+.main {
+    flex: 1;
+}
+
+.button {
+    background: @green;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    transition: all .5s;
+    font: bold 16px 'Arial';
+  
+    &:hover {
+        border-radius: 1px;
+        background: @green-hover;
+    }
+  
+    &:disabled {
+        background: grey;
+        cursor: default;
+  
+        &:hover {
+            background: grey;
+            border-radius: 20px;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    transition-duration: 0.2s;
+}
